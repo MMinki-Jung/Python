@@ -1,0 +1,14 @@
+#퀴즈3 비밀번호 만들기
+
+#사이트 주소를 받아 https:// 제거, .이후 제거
+#남은 글자 처음 세자리 + 글자 갯수 + 글자 내 'e' 갯수 + ! 로 구성
+
+
+url = "https://naver.com"
+
+url = url.replace("https://","")
+url = url[:url.index(".")]
+
+password = url[:3] + str(len(url)) + str(url.count("e")) + "!"
+
+print("{1}사이트의 비밀번호는 {0}입니다.".format(password,url))
